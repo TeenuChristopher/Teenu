@@ -1,0 +1,78 @@
+package automation_Testing;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Webmath_teenu {
+	public static void main(String[] args) throws InterruptedException {
+			
+			System.setProperty("webdriver.chrome.driver","E:\\Testing\\chromedriver.exe" );
+			
+			WebDriver driver = new ChromeDriver();
+			
+			driver.navigate().to("https://www.webmath.com");
+			driver.manage().window().maximize();
+			
+			//Two_points
+			
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[3]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/font/font/a[1]")).click();
+			driver.findElement(By.name("x1")).sendKeys("5");
+			driver.findElement(By.name("y1")).sendKeys("10");
+			driver.findElement(By.name("x2")).sendKeys("15");
+			driver.findElement(By.name("y2")).sendKeys("20");
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[2]/table/tbody/tr/td[1]/center/table/tbody/tr/td[2]/form/center/p[4]/input[1]")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/a/img")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div/div/div[6]/a")).click();
+			
+			
+			//points_and_slope
+			
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[3]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/font/font/a[2]")).click();
+			driver.findElement(By.name("x1")).sendKeys("5");
+			driver.findElement(By.name("y1")).sendKeys("10");
+			driver.findElement(By.name("mstr")).sendKeys("15");
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[2]/table/tbody/tr/td[1]/center/table/tbody/tr/td[2]/form/center/p[4]/input[1]")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/a/img"));
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div/div/div[6]/a")).click();
+			
+			//slope
+			
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[3]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/font/font/a[3]")).click();
+			driver.findElement(By.name("mstr")).sendKeys("40");
+			driver.findElement(By.name("bstr")).sendKeys("50");
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[2]/table/tbody/tr/td[1]/center/table/tbody/tr/td[2]/form/center/p[4]/input[1]")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/a/img")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div/div/div[6]/a")).click();
+			
+			//Xy_plot
+			
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[3]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/font/font/a[1]")).click();
+			driver.findElement(By.name("s")).sendKeys("cos(x)");
+			WebElement dropdown = driver.findElement(By.name("color"));
+			Select select = new Select(dropdown);
+			select.selectByIndex(0);
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[2]/table/tbody/tr/td[1]/center/table/tbody/tr/td[2]/form/center/p[3]/input[1]")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/a/img")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div/div/div[6]/a")).click();
+			
+			
+			//Inequality
+			
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[3]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/font/font/a[2]")).click();
+			WebElement dropdown1 = driver.findElement(By.name("ineq"));
+			Select select1 = new Select(dropdown1);
+			select1.selectByIndex(0);
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[2]/table/tbody/tr/td[1]/center/table/tbody/tr/td[2]/form/center/p[1]/input")).sendKeys("+1");
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/div[1]/div[2]/table/tbody/tr/td[1]/center/table/tbody/tr/td[2]/form/center/p[3]/input[1]")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[3]/a/img")).click();
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div/div/div[6]/a")).click();
+			
+			
+		
+
+	}
+
+}
